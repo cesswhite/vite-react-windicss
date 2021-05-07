@@ -2,7 +2,7 @@ const colors = require('windicss/colors')
 
 module.exports = {
     darkMode: 'class',
-    plugins: [typography],
+    plugins: [],
     theme: {
       extend: {
         colors: {

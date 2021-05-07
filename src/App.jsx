@@ -1,24 +1,28 @@
 import React, { useState } from 'react'
 import logo from './logo.svg'
-import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello</p>
-        <h1> Vite + WindiCSS + React!</h1>
-        <p>
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
+    <div className="w-full h-screen relative">
+     
+        <div className="mx-auto w-1/2 flex items-center justify-center">
+            <img src={logo} className="h-50 w-50" alt="logo" />
+        </div>
+     
+      <div className="mx-auto w-1/2 text-center">
+        <h1 className="text-5xl font-bold mb-4">Hello and Welcome</h1>
+        <p className="italic text-2xl mb-4"> Vite + WindiCSS + React!</p>
+        
+          <button className="px-10 py-2 bg-gray-800 rounded-md" onClick={() => setCount((count) => count + 1)}>
+            <span className="text-gray-50 font-bold">Count</span>
           </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
+          <br/>
+          <span className="font-bold text-3xl">{count}</span>
+       
+      </div>
+      <div className="w-full absolute bottom-0 text-center">
         <p>
           <a
             className="App-link"
@@ -38,7 +42,7 @@ function App() {
             Vite Docs
           </a>
         </p>
-      </header>
+      </div>
     </div>
   )
 }
